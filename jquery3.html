@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <h2>Letakan Kursor ke masing-masing </h2>
+    <div id="div1">Hewan Bebek</div>
+    <div id="div2">Hewan Kucing</div>
+    <div id="div3">Hewan Ayam</div>
+
+   <audio id="suara-bebek" src="sound/suara-bebek.mp3"></audio>
+   <audio id="suara-kucing" src="sound/suara-kucing.mp3"></audio>
+   <audio id="suara-ayam" src="sound/suara-ayam.mp3"></audio>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $("document").ready(function () {
+            $("#div1").mouseover(function () {
+                $(this).css({
+                    background: "url(https://www.shutterstock.com/image-photo/indian-running-ducks-walking-on-260nw-2373892183.jpg)"
+                });
+                var audio = document.getElementById("suara-bebek");
+                audio.play();
+            });
+
+            $("div").mouseout(function () {
+            $(this).css({
+                background: "green"
+            });
+            var audio = document.getElementById("suara-bebek");
+          audio.pause();
+          audio.currentTime = 0;
+          
+            $("#div2").mouseover(function () {
+                $(this).css({
+                    background: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3EEww1kayHoFGslJtqwdANpKVT7HAinJhVA&usqp=CAU)"
+                });
+                var audio = document.getElementById("suara-kucing");
+                audio.play();
+            });
+            $("div").mouseout(function () {
+            $(this).css({
+                background: "green"
+            });
+            var audio = document.getElementById("suara-kucing");
+          audio.pause();
+          audio.currentTime = 0;
+        });
+
+            $("#div3").mouseover(function () {
+                $(this).css({
+                    background: "url(https://poultryindonesia.com/wp-content/uploads/2021/03/ayam-6.jpg)"
+                });
+                var audio = document.getElementById("suara-ayam");
+                audio.play();
+            });
+            $("div").mouseout(function () {
+            $(this).css({
+                background: "green"
+            });
+        });
+        var audio = document.getElementById("suara-ayam");
+          audio.pause();
+          audio.currentTime = 0;
+        });
+    });
+
+    </script>
+</body>
+
+</html>
